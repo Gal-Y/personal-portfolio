@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import About from './components/About';
 import Resume from './components/Resume';
+import Portfolio from './components/Portfolio';
 import SvgDecoration from './components/SvgDecoration';
 import SvgDecorationLeftBottom from './components/SvgDecorationLeft1';
 import SvgDecorationRight from './components/SvgDecorationRight';
@@ -26,6 +27,7 @@ function App() {
                   <Route path="/" element={<About />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
+                  <Route path="/portfolio" element={<Portfolio />} />
                 </Routes>
               </div>
             </div>
