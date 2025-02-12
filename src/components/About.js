@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaTools, FaCloud, FaCode, FaRobot } from 'react-icons/fa';
+import { FaTools, FaCloud, FaCode, FaRobot, FaDumbbell, FaBasketballBall,
+  FaMusic, FaGamepad } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const About = () => {
@@ -23,6 +24,8 @@ const About = () => {
         and professional growth. I am seeking opportunities to leverage my skills and contribute to the success of 
         Solutions Architect, Software Development, and cloud engineering projects.
       </p>
+
+      {/* What I'm Doing */}
       <div className="border-t border-gray-600 my-8"></div>
       <h2 className="text-4xl font-bold mb-4 text-white text-left">What I'm Doing</h2>
       <div className="grid grid-cols-2 gap-4">
@@ -60,43 +63,88 @@ const About = () => {
         </motion.div>
       </div>
 
+      {/* Outside of Work */}
       <div className="border-t border-gray-600 my-8"></div>
-      <h2 className="text-4xl font-bold mb-4 text-white text-left">Leadership & Extra-Curricular</h2>
-      {/* Finsoc */}
-      <div className="flex items-center gap-4 mt-12">
-        <a href="https://www.unswfinsoc.org.au/" target="_blank" rel="noopener noreferrer">
-          <motion.div whileHover={{ scale: 1.1 }}>
-            <img src={require('../assets/finsoc.png')} alt="University Society Logo" className="w-100 h-12" />
-          </motion.div>
-        </a>
-        <div className="flex items-center">
-          <div className="w-4 h-4 bg-blue-500 rounded-full ml-8 mb-2"></div>
-          <h3 className="text-xl font-bold mb-2 ml-10 text-white">General Secretary</h3>
-        </div>
+      <h2 className="text-4xl font-bold mb-4 text-left">Outside of Work</h2>
+      <div className="flex flex-col md:flex-row md:justify-between items-center gap-6">
+        <motion.div
+          whileHover={{ y: -10, rotate: 2, transition: { type: "spring", stiffness: 300 } }}
+          className="flex flex-col items-center bg-[#1d1e23] p-6 rounded-xl shadow-lg border border-gray-600 w-full md:w-1/4"
+        >
+          <FaDumbbell className="text-5xl text-green-500 mb-4" />
+          <h3 className="text-2xl font-bold text-[#9a9da3] mb-2">Gym</h3>
+          <p className="text-center text-[#9a9da3]">
+            Pushing my limits with intense workouts like Chris Bumstead.
+          </p>
+        </motion.div>
+        <motion.div
+          whileHover={{ y: -10, rotate: -2, transition: { type: "spring", stiffness: 300 } }}
+          className="flex flex-col items-center bg-[#1d1e23] p-6 rounded-xl shadow-lg border border-gray-600 w-full md:w-1/4"
+        >
+          <FaBasketballBall className="text-5xl text-orange-500 mb-4" />
+          <h3 className="text-2xl font-bold text-[#9a9da3] mb-2">Basketball</h3>
+          <p className="text-center text-[#9a9da3]">
+            Splashing and dunking like LeBron James.
+          </p>
+        </motion.div>
+        <motion.div
+          whileHover={{ y: -10, scale: 1.05, transition: { type: "spring", stiffness: 300 } }}
+          className="flex flex-col items-center bg-[#1d1e23] p-6 rounded-xl shadow-lg border border-gray-600 w-full md:w-1/4"
+        >
+          <FaMusic className="text-5xl text-purple-500 mb-4" />
+          <h3 className="text-2xl font-bold text-[#9a9da3] mb-2">Piano</h3>
+          <p className="text-center text-[#9a9da3]">
+            Striking the keys to create melodies that soothe the soul.
+          </p>
+        </motion.div>
+        <motion.div
+          whileHover={{ y: -10, rotate: 3, transition: { type: "spring", stiffness: 300 } }}
+          className="flex flex-col items-center bg-[#1d1e23] p-6 rounded-xl shadow-lg border border-gray-600 w-full md:w-1/4"
+        >
+          <FaGamepad className="text-5xl text-red-500 mb-4" />
+          <h3 className="text-2xl font-bold text-[#9a9da3] mb-2">Video Games</h3>
+          <p className="text-center text-[#9a9da3]">
+            Diving into immersive worlds and adventures for fun and relaxation.
+          </p>
+        </motion.div>
       </div>
-      {/* 180 */}
-      <div className="flex items-center gap-4 mt-20">
-        <a href="https://www.facebook.com/unswmarksoc/" target="_blank" rel="noopener noreferrer">
-          <motion.div whileHover={{ scale: 1.1 }}>
-            <img src={require('../assets/180.png')} alt="University Society Logo" className="w-100 h-16" />
+
+      {/* Thank You Section */}
+      <div className="mt-16">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          className="bg-gradient-to-r from-[#5e68e6] via-[#405dea] to-[#363c87] p-8 rounded-3xl shadow-2xl text-center"
+        >
+          <motion.h2
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="text-5xl font-extrabold text-white mb-4 animate-pulse"
+          >
+            Thank You For Visiting!
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 1 }}
+            className="text-xl text-white"
+          >
+            I truly appreciate your time and interest. Let's connect and create something extraordinary together!
+          </motion.p>
+          <motion.div
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+            className="mt-8 inline-block"
+          >
+            {/* Decorative rotating SVG */}
+            <svg width="80" height="80" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" stroke="white" strokeWidth="5" fill="transparent" />
+            </svg>
           </motion.div>
-        </a>
-        <div className="flex items-center">
-          <div className="w-4 h-4 bg-blue-500 rounded-full ml-20 mb-2"></div>
-          <h3 className="text-xl font-bold mb-2 ml-10 text-white">Project Consultant</h3>
-        </div>
-      </div>
-      {/* Marksoc */}
-      <div className="flex items-center gap-4 mt-20">
-        <a href="https://marksocietywebsite.com" target="_blank" rel="noopener noreferrer">
-          <motion.div whileHover={{ scale: 1.1 }}>
-            <img src={require('../assets/marksoc.png')} alt="University Society Logo" className="w-100 h-16" />
-          </motion.div>
-        </a>
-        <div className="flex items-center">
-          <div className="w-4 h-4 bg-blue-500 rounded-full ml-20 mb-2"></div>
-          <h3 className="text-xl font-bold mb-2 ml-10 text-white">IT Sub-Committee</h3>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

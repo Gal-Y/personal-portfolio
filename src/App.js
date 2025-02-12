@@ -5,18 +5,23 @@ import Sidebar from './components/Sidebar';
 import About from './components/About';
 import Resume from './components/Resume';
 import Portfolio from './components/Portfolio';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
 import SvgDecoration from './components/SvgDecoration';
 import SvgDecorationLeftBottom from './components/SvgDecorationLeft1';
 import SvgDecorationRight from './components/SvgDecorationRight';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CJoyBlog from './components/BlogPosts/CJoyBlog';
+import CConBlog from './components/BlogPosts/CConBlog';
 
 function App() {
   return (
     <Router>
-      <div className="relative">
+      <div className="relative min-h-screen bg-[#1d1e24] flex flex-col">
         <SvgDecoration />
         <SvgDecorationLeftBottom />
         <SvgDecorationRight />
+
         <div className="App flex justify-center bg-[#1d1e24] min-h-screen">
           <div className="max-w-screen-lg w-full">
             <Header />
@@ -28,6 +33,10 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/resume" element={<Resume />} />
                   <Route path="/portfolio" element={<Portfolio />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/blogPosts/cjoy" element={<CJoyBlog />} />
+                  <Route path="/blogPosts/ccon" element={<CConBlog />} />
+                  <Route path="/contact" element={<Contact />} />
                 </Routes>
               </div>
             </div>
@@ -37,5 +46,7 @@ function App() {
     </Router>
   );
 }
+
+
 
 export default App;

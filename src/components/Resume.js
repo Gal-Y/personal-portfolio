@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBriefcase, FaCode, FaCogs, FaGraduationCap } from 'react-icons/fa';
+import { FaBriefcase, FaCode, FaCogs, FaGraduationCap, FaUsers } from 'react-icons/fa';
 
 const Resume = () => {
   return (
@@ -115,6 +115,57 @@ const Resume = () => {
           </div>
         </div>
       </div>
+
+      {/* Leadership & Co-Curricular */}
+      <div className="border-t border-gray-600 my-8"></div>
+
+      <h2 className="text-3xl font-bold mb-4 text-white text-left flex items-center">
+        <FaUsers className="text-blue-500 mr-4" /> Leadership & Co-Curricular
+      </h2>
+
+      <div className="mb-8">
+        {/* UNSW Finance and Banking Society */}
+        <div className="flex items-start">
+          <div className="flex-shrink-0 mt-1">
+            <div className="w-3 h-3 mt-1 bg-blue-500 rounded-full"></div>
+          </div>
+          <div className="ml-4">
+          <h3 className="text-xl font-bold text-white text-left">UNSW Finance and Banking Society</h3>
+            <p className="text-sm text-accent text-left">February 2021 - September 2023</p>
+            <ul className=" text-sm list-disc list-inside text-[#9a9da3] ml-4 text-left">
+              <li>HR Subcommittee (February 2021 - September 2021)</li>
+              <li>HR Director (September 2021 - September 2022)</li>
+              <li>General Secretary (September 2022 - September 2023)</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* 180 Degrees Consulting */}
+        <div className="flex items-start mt-8">
+          <div className="flex-shrink-0 mt-1">
+            <div className="w-3 h-3 mt-1 bg-blue-500 rounded-full"></div>
+          </div>
+          <div className="ml-4">
+            <h3 className="text-xl font-bold text-white text-left">180 Degrees Consulting</h3>
+            <p className="text-sm text-accent text-left">February 2021 - May 2022</p>
+            <p className="text-sm text-[#9a9da3] text-left">Project Consultant</p>
+          </div>
+        </div>
+
+        {/* UNSW Marketing Society */}
+        <div className="flex items-start mt-8">
+          <div className="flex-shrink-0 mt-1">
+            <div className="w-3 h-3 mt-1 bg-blue-500 rounded-full"></div>
+          </div>
+          <div className="ml-4">
+            <h3 className="text-xl font-bold text-white text-left">UNSW Marketing Society</h3>
+            <p className="text-sm text-accent text-left">February 2024 - August 2024</p>
+            <p className="text-sm text-[#9a9da3] text-left">IT Sub-Committee</p>
+          </div>
+        </div>
+      </div>
+
+      
 
       {/* Skills Section */}
       <div className="border-t border-gray-600 my-8"></div>
