@@ -27,9 +27,19 @@ function App() {
         <div className="App flex justify-center bg-[#1d1e24] min-h-screen">
           <div className="max-w-screen-lg w-full">
             <Header />
-            <div className="flex items-start mt-2">
-              <Sidebar />
-              <div className="flex-1 p-8 pt-28 md:pt-8 bg-[#1d1e24] overflow-y-auto min-h-screen relative z-20">
+
+            {/* Render Mobile Sidebar (horizontal) on small screens */}
+            <div className="md:hidden">
+              <Sidebar variant="mobile" />
+            </div>
+
+            <div className="flex">
+              {/* Render Desktop Sidebar (vertical) on medium and larger screens */}
+              <div className="hidden md:block">
+                <Sidebar variant="desktop" />
+              </div>
+
+              <div className="flex-1 p-8 pt-8 md:pt-8 bg-[#1d1e24] overflow-y-auto min-h-screen relative z-20">
                 <Routes>
                   <Route path="/" element={<About />} />
                   <Route path="/about" element={<About />} />
