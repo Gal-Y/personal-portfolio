@@ -18,8 +18,7 @@ const Header = () => {
       {/* Name & Title */}
       <div className="flex flex-col items-center md:items-start ml-0 md:ml-4 mt-4 md:mt-0">
         <h1 className="text-3xl font-bold">Galen Yuan</h1>
-        <h2 className="text-sm text-accent">SWE Student | Aspiring Solutions Architect |</h2>
-        <h3 className="text-sm text-accent">Software Engineer</h3>
+        <h2 className="text-sm text-accent md:text-left">SWE Student | Aspiring Solutions Architect | Software Engineer</h2>
       </div>
 
       {/* Vertical Divider (Desktop Only) */}
