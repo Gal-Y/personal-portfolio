@@ -33,7 +33,7 @@ const Header = () => {
         </div>
 
         {/* CV */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col ml-6 items-center md:items-start">
           <span className="font-bold">CV:</span>
           <a href="/path/to/cv.pdf" className="hover:text-accent">Download</a>
         </div>
@@ -45,7 +45,7 @@ const Header = () => {
         </div>
 
         {/* Status */}
-        <div className="flex flex-col gap-y-2 items-center md:items-start">
+        <div className="flex flex-col ml-6 gap-y-2 items-center md:items-start">
           <span className="font-bold">Status:</span>
           <span>🌟</span>
         </div>
