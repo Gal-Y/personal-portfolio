@@ -35,7 +35,7 @@ const Header = () => {
         {/* CV */}
         <div className="flex flex-col ml-6 items-center md:items-start">
           <span className="font-bold">CV:</span>
-          <a href="/path/to/cv.pdf" className="hover:text-accent">Download</a>
+          <a href="/YuanG-CV.pdf" download="YuanG-CV.pdf" className="hover:text-accent">Download</a>  
         </div>
 
         {/* Location */}
