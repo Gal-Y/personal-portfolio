@@ -28,12 +28,12 @@ const Portfolio = () => {
 
   const certifications = [
     {
-      title: 'AWS Certified Solutions Architect',
-      description: 'Earned in 2024. Demonstrates expertise in designing cloud solutions.',
+      title: 'AWS Certified Cloud Essentials',
+      description: 'Earned in 2024. Demonstrates expertise in designing cloud fundamentals.',
     },
     {
-      title: 'Google Cloud Professional Cloud Engineer',
-      description: 'Achieved in 2023. Validates proficiency in managing GCP environments.',
+      title: 'Incoming... AWS Certified Solutions Architect - Associate',
+      description: 'Demonstrating foundational qualification that validates the ability to design secure, cost-effective, and scalable cloud architectures.',
     },
   ];
 
