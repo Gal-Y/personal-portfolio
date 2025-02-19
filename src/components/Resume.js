@@ -25,9 +25,12 @@ const Resume = () => {
             </div>
             <div className="border-l-2 border-gray-600 mt-2 pl-4">
               <ul className="list-disc list-inside text-[#9a9da3] text-left space-y-6">
-                <li>Responsibility 1</li>
-                <li>Responsibility 2</li>
-                <li>Responsibility 3</li>
+                <li>Collaborating with technical teams to manage and streamline support processes for IBM Maximo Asset Management, a leading 
+                  enterprise asset management software used across various industries.</li>
+                <li>Developing expertise in IT support workflows, troubleshooting complex system issues, 
+                  and gaining exposure to database management technologies such as SQL and DB2.</li>
+                <li>Enhancing automation and operational efficiency by documenting and optimizing technical support processes, 
+                  ensuring seamless issue resolution and improved client experiences.</li>
               </ul>
             </div>
           </div>
