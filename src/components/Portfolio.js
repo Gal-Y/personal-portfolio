@@ -5,6 +5,7 @@ import { FaCube, FaCertificate } from 'react-icons/fa';
 // Import your project images
 import ProjectImage1 from '../assets/carnation.png';
 import ProjectImage2 from '../assets/currency.png';
+import ProjectImage3 from '../assets/portfolio.png';
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('projects');
@@ -23,6 +24,13 @@ const Portfolio = () => {
       link: 'http://13.236.94.102',
       techStack: ['AWS EC2, Python, JavaScript, CSS'],
       type: 'Application',
+    },
+    {
+      title: 'Personal Portfolio',
+      image: ProjectImage3,
+      link: 'https://www.galen-yuan.com/',
+      techStack: ['AWS Amplify, React, JavaScript, CSS Tailwind'],
+      type: 'Portfolio',
     },
   ];
 
