@@ -13,7 +13,7 @@ import SvgDecorationRight from './components/SvgDecorationRight';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CJoyBlog from './components/BlogPosts/CJoyBlog';
 import CConBlog from './components/BlogPosts/CConBlog';
-
+import PPortBlog from './components/BlogPosts/PPortBlog';
 function App() {
   return (
     <Router>
@@ -48,6 +48,7 @@ function App() {
                   <Route path="/blog" element={<Blog />} />
                   <Route path="/blogPosts/cjoy" element={<CJoyBlog />} />
                   <Route path="/blogPosts/ccon" element={<CConBlog />} />
+                  <Route path="/blogPosts/pport" element={<PPortBlog />} />
                   <Route path="/contact" element={<Contact />} />
                 </Routes>
               </div>

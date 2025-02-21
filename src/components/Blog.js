@@ -20,6 +20,14 @@ const blogPosts = [
     image: require('../assets/currencyblog.png'),
     link: '/blogPosts/ccon',
   },
+  {
+    id: 3,
+    title: 'Personal Portfolio Rationale',
+    description: 'Display my projects and experiences.',
+    date: '15/01/2025',
+    image: require('../assets/personalblog.png'),
+    link: '/blogPosts/pport',
+  },
 ];
 
 const Blog = () => {

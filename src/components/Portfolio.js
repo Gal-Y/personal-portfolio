@@ -5,7 +5,7 @@ import { FaCube, FaCertificate } from 'react-icons/fa';
 // Import your project images
 import ProjectImage1 from '../assets/carnation.png';
 import ProjectImage2 from '../assets/currency.png';
-import ProjectImage3 from '../assets/portfolio.png';
+import ProjectImage3 from '../assets/personal.png';
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('projects');
