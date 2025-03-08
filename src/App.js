@@ -49,6 +49,7 @@ function App() {
                   <Route path="/blogPosts/cjoy" element={<CJoyBlog />} />
                   <Route path="/blogPosts/ccon" element={<CConBlog />} />
                   <Route path="/blogPosts/pport" element={<PPortBlog />} />
+                  <Route path="/blogPosts/sright" element={<SRightBlog />} />
                   <Route path="/contact" element={<Contact />} />
                 </Routes>
               </div>
