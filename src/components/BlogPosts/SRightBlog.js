@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaDollarSign, FaTasks, FaUsers, FaChartLine, FaCloud, FaNetworkWired, FaDatabase, FaRocket, FaBug } from 'react-icons/fa';
+import { FaDollarSign, FaTasks, FaUsers, FaChartLine, FaCloud, FaNetworkWired, FaDatabase, FaRocket, FaBug, FaTools } from 'react-icons/fa';
 import { SiJavascript, SiPython, SiPostgresql, SiKubernetes, SiDocker, SiGrafana } from 'react-icons/si';
 import { HiOutlineCube } from 'react-icons/hi';
 import { FiLink } from 'react-icons/fi';

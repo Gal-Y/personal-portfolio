@@ -14,6 +14,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CJoyBlog from './components/BlogPosts/CJoyBlog';
 import CConBlog from './components/BlogPosts/CConBlog';
 import PPortBlog from './components/BlogPosts/PPortBlog';
+import SRightBlog from './components/BlogPosts/SRightBlog';
+
 function App() {
   return (
     <Router>
