@@ -62,9 +62,6 @@ const SRightBlog = () => {
             <SiPython className="text-blue-400 mr-2" /> Flask - Backend
           </div>
           <div className="flex items-center">
-            <SiPostgresql className="text-blue-500 mr-2" /> PostgreSQL - Database
-          </div>
-          <div className="flex items-center">
             <SiKubernetes className="text-orange-500 mr-2" /> Kubernetes - Deployment
           </div>
           <div className="flex items-center">
@@ -95,7 +92,7 @@ const SRightBlog = () => {
         </h2>
         <div className="space-y-4 text-[#9a9da3] text-left">
           <div><strong>Scaling Backend Services:</strong> Adjusted CPU/memory thresholds for optimal autoscaling.</div>
-          <div><strong>Database Optimization:</strong> Indexed SQL queries to handle large transaction data efficiently.</div>
+          <div><strong>UI for user needs:</strong> Re-designed UI for better user experience.</div>
           <div><strong>Ingress Controller Configuration:</strong> Fixed routing issues for frontend-backend communication.</div>
         </div>
       </section>
@@ -108,7 +105,7 @@ const SRightBlog = () => {
           <li>Building scalable web applications requires **cloud-native solutions**.</li>
           <li>Kubernetes autoscaling helps **handle unpredictable traffic spikes**.</li>
           <li>Frontend-backend communication requires careful **API gateway and ingress routing** configurations.</li>
-          <li>Cloud monitoring with **Grafana & Prometheus** provides deep insights into system performance.</li>
+          <li>LEARNING KUBERNETES IS LIKE LEARNING A WHOLE NEW WORLD OF OPERATING SYSTEMS!!!</li>
         </ul>
       </section>
 
@@ -124,7 +121,7 @@ const SRightBlog = () => {
             GitHub Repository
           </a>
           <a
-            href="https://splitright.app"
+            href="http://aeba73389ac9f440ab6b82b03c595b30-8e2a78f55f0297b7.elb.ap-southeast-2.amazonaws.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-white transition"

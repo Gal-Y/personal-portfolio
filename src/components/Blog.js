@@ -28,8 +28,15 @@ const blogPosts = [
     image: require('../assets/personalblog.png'),
     link: '/blogPosts/pport',
   },
+  {
+    id: 4,
+    title: 'SplitRight Rationale',
+    description: 'A web application for expense splitting and k8s load generator.',
+    date: '28/02/2025',
+    image: require('../assets/splitrightblog.png'),
+    link: '/blogPosts/sright',
+  },
 ];
-
 const Blog = () => {
   return (
     <div className="bg-[#23262b] text-white p-8 rounded-3xl w-full max-w-screen-lg mx-auto">
