@@ -6,6 +6,7 @@ import { FaCube, FaCertificate } from 'react-icons/fa';
 import ProjectImage1 from '../assets/carnation.png';
 import ProjectImage2 from '../assets/currency.png';
 import ProjectImage3 from '../assets/personal.png';
+import ProjectImage4 from '../assets/splitter.png';
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('projects');
@@ -31,6 +32,13 @@ const Portfolio = () => {
       link: 'https://www.galen-yuan.com/',
       techStack: ['AWS Amplify, React, JavaScript, CSS Tailwind'],
       type: 'Portfolio',
+    },
+    {
+      title: 'Expense Splitter',
+      image: ProjectImage4,
+      link: 'http://aeba73389ac9f440ab6b82b03c595b30-8e2a78f55f0297b7.elb.ap-southeast-2.amazonaws.com/',
+      techStack: ['AWS Kubernetes Service, React, JavaScript, Python, Flask'],
+      type: 'Application',
     },
   ];
 
