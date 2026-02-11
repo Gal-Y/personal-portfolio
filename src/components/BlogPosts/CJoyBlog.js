@@ -6,10 +6,10 @@ import { FiLink } from 'react-icons/fi';
 
 const CJoyBlog = () => {
   return (
-    <div className="bg-[#23262b] text-white p-8 rounded-3xl w-full max-w-screen-lg mx-auto">
+    <div className="surface-card text-white p-5 sm:p-8 rounded-3xl w-full max-w-screen-lg mx-auto">
       <h1 className="text-4xl font-bold mb-4">Building a Dynamic Web Application with AWS: My Carnation Joy Project</h1>
       
-      <p className="text-[#9a9da3] mb-6 text-left mb-12">
+      <p className="muted-text mb-6 text-left mb-12">
         In today’s digital landscape, leveraging cloud services is crucial for creating scalable, secure, and efficient web applications. 
         In this blog post, I’ll walk you through the architecture, development process, and AWS services I utilized to build 
         <strong> "Carnation Joy"</strong>, a comprehensive web platform designed to streamline aged and disability care services.
@@ -19,7 +19,7 @@ const CJoyBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaHeart className="text-orange-500 mr-2" /> Why This Project Matters
         </h2>
-        <p className="text-[#9a9da3] text-left">
+        <p className="muted-text text-left">
           This project wasn’t just another technical endeavor for me—it was personal. I built Carnation Joy for my father’s business, 
           which operates under the National Disability Insurance Scheme (NDIS). His mission is to connect compassionate carers with individuals 
           who require aged and disability care services. Witnessing his dedication inspired me to create a platform that could enhance 
@@ -31,7 +31,7 @@ const CJoyBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaTasks className="text-blue-500 mr-2" /> Project Overview
         </h2>
-        <ul className="list-disc list-inside text-[#9a9da3] space-y-2 text-left">
+        <ul className="list-disc list-inside muted-text space-y-2 text-left">
           <li>Contact Form for general inquiries</li>
           <li>Become a Carer Form for job applications</li>
           <li>Dynamic service pages with carousels and responsive layouts</li>
@@ -43,7 +43,7 @@ const CJoyBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaTools className="text-green-500 mr-2" /> Tech Stack
         </h2>
-        <div className="grid grid-cols-2 gap-4 text-[#9a9da3]">
+        <div className="grid grid-cols-2 gap-4 muted-text">
           <div className="flex items-center">
             <SiHtml5 className="text-red-500 mr-2" /> HTML - Frontend
           </div>
@@ -81,7 +81,7 @@ const CJoyBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaCloud className="text-blue-400 mr-2" /> Development Process
         </h2>
-        <ol className="list-decimal list-inside text-[#9a9da3] space-y-4 text-left">
+        <ol className="list-decimal list-inside muted-text space-y-4 text-left">
           <li>
             <strong className="text-white">Frontend Development</strong>
             <p className="mt-2">
@@ -126,7 +126,7 @@ const CJoyBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaBug className="text-red-400 mr-2" /> Key Challenges
         </h2>
-        <div className="space-y-4 text-[#9a9da3] text-left">
+        <div className="space-y-4 muted-text text-left">
           <div>
             <strong>Caching Issues During Development:</strong> Changes made to CSS and HTML were not reflecting on the live website due to browser caching.
           </div>
@@ -146,7 +146,7 @@ const CJoyBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaRocket className="text-purple-400 mr-2" /> Lessons Learned
         </h2>
-        <ul className="list-disc list-inside text-[#9a9da3] space-y-2 text-left">
+        <ul className="list-disc list-inside muted-text space-y-2 text-left">
           <li>Deepened AWS expertise (Lambda, API Gateway, DynamoDB, SES).</li>
           <li>Enhanced debugging and troubleshooting skills.</li>
           <li>Improved cloud security practices with IAM roles and secure APIs.</li>

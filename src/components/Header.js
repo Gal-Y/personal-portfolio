@@ -1,68 +1,91 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaMapMarkerAlt, FaRegFileAlt, FaRegEnvelope, FaRegStar } from 'react-icons/fa';
 
 const Header = () => {
   return (
-    <motion.header className="relative flex flex-col md:flex-row items-center bg-[#23262b] text-white p-4 rounded-3xl mt-12 mx-4 md:mr-8">
-      
-      {/* Profile Picture */}
-      <div className="relative w-36 h-36 rounded-xl bg-[#1d1e23] flex items-center justify-center -mt-10 ml-8">
-        <img
-          src={require('../assets/profile.jpg')}
-          alt="Profile"
-          className="w-32 h-32 rounded-full object-cover"
-        />
-      </div>
+    <motion.header
+      initial={{ opacity: 0, y: 14 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
+      className="surface-card relative overflow-hidden rounded-[1.85rem] p-5 text-white sm:p-6"
+    >
+      <div className="pointer-events-none absolute -right-16 -top-20 h-52 w-52 rounded-full bg-blue-500/20 blur-3xl" />
 
-      {/* Name & Title */}
-      <div className="flex flex-col items-center md:items-start ml-0 md:ml-4 mt-4 md:mt-0">
-        <h1 className="text-3xl font-bold">Galen Yuan</h1>
-        <h2 className="text-sm text-accent md:text-left">SWE Student | Aspiring Solutions Architect | Software Engineer</h2>
-      </div>
+      <div className="relative flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="relative mx-auto sm:mx-0">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400/80 to-blue-700/90 blur-[1px]" />
+            <div className="relative m-[2px] h-28 w-28 rounded-2xl bg-[#1b202d] p-[5px] sm:h-32 sm:w-32">
+              <img
+                src={require('../assets/profile.jpg')}
+                alt="Profile"
+                className="h-full w-full rounded-[0.95rem] object-cover"
+              />
+            </div>
+          </div>
 
-      {/* Vertical Divider (Desktop Only) */}
-      <div className="hidden md:block border-l border-gray-600 h-24 mx-4"></div>
-
-      {/* Contact Information */}
-      <div className="w-full md:w-auto grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mt-4 md:mt-0">
-        {/* Email */}
-        <div className="flex flex-col items-center md:items-start">
-          <span className="font-bold">Email:</span>
-          <span>galenyuan1@gmail.com</span>
+          <div className="text-center sm:text-left">
+            <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-[2.1rem]">Galen Yuan</h1>
+            <p className="mt-1 text-sm font-semibold text-blue-200 sm:text-base">
+              SWE Student | Aspiring Solutions Architect | Software Engineer
+            </p>
+            <span className="chip mt-3 inline-flex gap-1.5">
+              <FaRegStar className="text-[0.72rem] text-blue-300" /> Open to opportunities
+            </span>
+          </div>
         </div>
 
-        {/* CV */}
-        <div className="flex flex-col ml-6 items-center md:items-start">
-          <span className="font-bold">CV:</span>
-          <a href="/cv.pdf" download="cv.pdf" className="hover:text-accent">Download</a>  
+        <div className="grid w-full gap-3 sm:grid-cols-2 xl:w-auto xl:min-w-[430px]">
+          <div className="surface-card-soft rounded-xl p-3 text-left">
+            <p className="flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-blue-200">
+              <FaRegEnvelope /> Email
+            </p>
+            <a
+              className="mt-1 block text-sm font-semibold text-[#ebf2ff] transition hover:text-blue-300"
+              href="mailto:galenyuan1@gmail.com"
+            >
+              galenyuan1@gmail.com
+            </a>
+          </div>
+
+          <div className="surface-card-soft rounded-xl p-3 text-left">
+            <p className="flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-blue-200">
+              <FaRegFileAlt /> CV
+            </p>
+            <a
+              href="/cv.pdf"
+              download="cv.pdf"
+              className="mt-1 inline-block text-sm font-semibold text-[#ebf2ff] transition hover:text-blue-300"
+            >
+              Download Resume
+            </a>
+          </div>
+
+          <div className="surface-card-soft rounded-xl p-3 text-left">
+            <p className="flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-blue-200">
+              <FaMapMarkerAlt /> Location
+            </p>
+            <p className="mt-1 text-sm font-semibold text-[#ebf2ff]">Sydney, Australia</p>
+          </div>
+
+          <div className="surface-card-soft rounded-xl p-3 text-left">
+            <p className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-blue-200">Status</p>
+            <p className="mt-1 text-sm font-semibold text-[#ebf2ff]">Available for SWE internships</p>
+          </div>
         </div>
 
-        {/* Location */}
-        <div className="flex flex-col items-center md:items-start">
-          <span className="font-bold">Location:</span>
-          <span>Sydney, Australia</span>
+        <div className="flex items-center justify-center gap-3 xl:justify-end">
+          <a href="https://www.linkedin.com/in/galen-yuan/" target="_blank" rel="noopener noreferrer" className="icon-button" aria-label="LinkedIn">
+            <FaLinkedin className="text-lg" />
+          </a>
+          <a href="https://github.com/Gal-Y" target="_blank" rel="noopener noreferrer" className="icon-button" aria-label="GitHub">
+            <FaGithub className="text-lg" />
+          </a>
         </div>
-
-        {/* Status */}
-        <div className="flex flex-col ml-6 gap-y-2 items-center md:items-start">
-          <span className="font-bold">Status:</span>
-          <span>🌟</span>
-        </div>
-      </div>
-
-      {/* Social Media Icons */}
-      <div className="flex space-x-4 mt-4">
-        <a href="https://www.linkedin.com/in/galen-yuan/" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="text-2xl hover:text-accent" />
-        </a>
-        <a href="https://github.com/Gal-Y" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="text-2xl hover:text-accent" />
-        </a>
       </div>
     </motion.header>
   );
 };
 
 export default Header;
-

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaUser, FaFileAlt, FaCube, FaBook, FaEnvelope } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar = ({ variant }) => {
   const location = useLocation();
-  const [activeLink, setActiveLink] = React.useState(location.pathname === '/' ? '/about' : location.pathname);
+  const normalizePath = (path) => (path === '/' ? '/about' : path);
+  const [activeLink, setActiveLink] = React.useState(normalizePath(location.pathname));
+
+  useEffect(() => {
+    setActiveLink(normalizePath(location.pathname));
+  }, [location.pathname]);
 
   const links = [
     { to: '/about', icon: <FaUser />, label: 'ABOUT' },
@@ -17,42 +22,65 @@ const Sidebar = ({ variant }) => {
 
   if (variant === 'mobile') {
     return (
-      <motion.nav className="sticky top-0 z-30 flex flex-row items-center justify-around bg-[#23262b] text-white p-4 rounded-3xl mt-8 mx-4 md:hidden">
-        {links.map((link) => (
-          <Link
-            key={link.to}
-            to={link.to}
-            onClick={() => setActiveLink(link.to)}
-            className={`flex flex-col items-center justify-center w-20 h-16 rounded-lg text-xs ${
-              activeLink === link.to
-                ? 'bg-blue-600 text-white'
-                : 'bg-[#2e2f36] text-[#9a9da3] hover:text-blue-500'
-            }`}
-          >
-            <div className="mb-1">{link.icon}</div>
-            <span>{link.label}</span>
-          </Link>
-        ))}
+      <motion.nav
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="surface-card sticky top-3 z-30 rounded-2xl p-2 md:hidden"
+      >
+        <div className="flex items-center gap-2 overflow-x-auto pb-1">
+          {links.map((link) => {
+            const isActive = activeLink === link.to;
+
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setActiveLink(link.to)}
+                className={`flex min-w-[80px] flex-col items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-[0.65rem] font-semibold tracking-[0.06em] transition ${
+                  isActive
+                    ? 'bg-blue-600 text-white shadow-[0_12px_24px_-20px_rgba(59,130,246,1)]'
+                    : 'text-[#9ea8c4] hover:bg-[#2d364b] hover:text-white'
+                }`}
+              >
+                <span className="text-sm">{link.icon}</span>
+                <span>{link.label}</span>
+              </Link>
+            );
+          })}
+        </div>
       </motion.nav>
     );
   }
-  
+
   return (
-    <motion.aside className="sticky top-0 flex flex-col items-center bg-[#23262b] text-white p-4 rounded-3xl mt-8 space-y-4 w-40">
-      <nav className="flex flex-col space-y-4">
-        {links.map((link) => (
-          <Link
-            key={link.to}
-            to={link.to}
-            onClick={() => setActiveLink(link.to)}
-            className={`flex flex-col items-center justify-center w-28 h-20 rounded-lg text-sm ${
-              activeLink === link.to ? 'bg-blue-600 text-white' : 'bg-[#2e2f36] text-[#9a9da3] hover:text-blue-500'
-            }`}
-          >
-            <div className="mb-3">{link.icon}</div>
-            {link.label}
-          </Link>
-        ))}
+    <motion.aside
+      initial={{ opacity: 0, x: -10 }}
+      animate={{ opacity: 1, x: 0 }}
+      className="surface-card sticky top-6 w-[180px] rounded-[1.6rem] p-4 text-white"
+    >
+      <nav className="flex flex-col gap-3">
+        {links.map((link) => {
+          const isActive = activeLink === link.to;
+
+          return (
+            <Link
+              key={link.to}
+              to={link.to}
+              onClick={() => setActiveLink(link.to)}
+              className={`group relative flex h-[74px] items-center gap-3 rounded-xl px-4 text-sm font-semibold tracking-wide transition ${
+                isActive
+                  ? 'bg-blue-600 text-white shadow-[0_18px_30px_-24px_rgba(59,130,246,1)]'
+                  : 'bg-[#2a3142]/70 text-[#a5afcb] hover:bg-[#323c52] hover:text-white'
+              }`}
+            >
+              <span className={`text-base ${isActive ? 'text-white' : 'text-blue-300/90 group-hover:text-blue-200'}`}>
+                {link.icon}
+              </span>
+              <span>{link.label}</span>
+              {isActive && <span className="absolute right-3 h-1.5 w-1.5 rounded-full bg-white" aria-hidden="true" />}
+            </Link>
+          );
+        })}
       </nav>
     </motion.aside>
   );
