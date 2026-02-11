@@ -1,160 +1,143 @@
 import React from 'react';
-import { FaTools, FaCloud, FaCode, FaRobot, FaDumbbell, FaBasketballBall, FaMusic, FaGamepad } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import {
+  FaTools,
+  FaCloud,
+  FaCode,
+  FaRobot,
+  FaDumbbell,
+  FaBasketballBall,
+  FaMusic,
+  FaGamepad,
+} from 'react-icons/fa';
+
+const focusAreas = [
+  {
+    title: 'Solutions Architect',
+    description:
+      'Designing scalable, secure, and cost-effective cloud architectures to optimize performance and enable seamless integration.',
+    icon: FaTools,
+    iconColor: 'text-blue-400',
+  },
+  {
+    title: 'Cloud Engineer',
+    description:
+      "Designing, securing, and maintaining an organization's cloud-based infrastructure and applications.",
+    icon: FaCloud,
+    iconColor: 'text-cyan-400',
+  },
+  {
+    title: 'AI',
+    description: 'Leveraging AI to drive innovation and improve decision-making.',
+    icon: FaRobot,
+    iconColor: 'text-indigo-300',
+  },
+  {
+    title: 'Software Development',
+    description: 'Building practical, high-impact software for both personal and professional use cases.',
+    icon: FaCode,
+    iconColor: 'text-blue-300',
+  },
+];
+
+const hobbies = [
+  {
+    title: 'Gym',
+    description: 'Pushing my limits with consistent training and discipline.',
+    icon: FaDumbbell,
+    iconColor: 'text-emerald-400',
+  },
+  {
+    title: 'Basketball',
+    description: 'Playing pickup games and improving fundamentals on the court.',
+    icon: FaBasketballBall,
+    iconColor: 'text-orange-400',
+  },
+  {
+    title: 'Piano',
+    description: 'Practicing pieces that challenge precision, rhythm, and creativity.',
+    icon: FaMusic,
+    iconColor: 'text-sky-300',
+  },
+  {
+    title: 'Video Games',
+    description: 'Enjoying immersive worlds and collaborative gameplay with friends.',
+    icon: FaGamepad,
+    iconColor: 'text-rose-400',
+  },
+];
+
+const introParagraphs = [
+  "I'm a Software Engineering student passionate about cloud technologies, DevOps, and infrastructure automation. I'm eager to apply my skills in real-world projects and am actively seeking internship opportunities to contribute, learn, and grow as an aspiring Solutions Architect.",
+  "I have experience with a range of programming languages, including C, Java, and Python, as well as front-end technologies like HTML, CSS, JavaScript, and React. I also have hands-on AWS experience with S3, CloudFront, API Gateway, and Lambda, plus CI/CD automation using GitHub Actions.",
+  "While completing my Bachelor's degree in Software Engineering, I am committed to continuous learning and professional growth. I am seeking opportunities to contribute to Solutions Architecture, Software Development, and cloud engineering projects.",
+];
 
 const About = () => {
   return (
-    <div className="bg-[#23262b] text-white p-4 sm:p-8 rounded-3xl w-full h-full">
-      {/* About Me Section */}
-      <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center sm:text-left">About Me</h1>
-      <p className="text-sm sm:text-base mb-4 text-[#9a9da3] text-left">
-        I'm a Software Engineering student passionate about cloud technologies, DevOps, and infrastructure automation. 
-        I'm eager to apply my skills in real-world projects and am actively seeking internship opportunities to 
-        contribute, learn, and grow as an aspiring Solutions Architect.
-      </p>
-      <p className="text-sm sm:text-base mb-4 text-[#9a9da3] text-left">
-        I have experience with a range of programming languages, including C, Java, and Python, 
-        as well as front-end technologies like HTML, CSS, JavaScript, and React. Additionally, I have hands-on 
-        knowledge of AWS services, using tools like S3, CloudFront, API Gateway, and Lambda to host and manage my 
-        projects efficiently. I've also implemented CI/CD pipelines using GitHub Actions to automate build, test, 
-        and deployment processes, ensuring smooth and efficient project workflows.
-      </p>
-      <p className="text-sm sm:text-base mb-6 text-[#9a9da3] text-left">
-        While completing my Bachelor's degree in Software Engineering, I am committed to continuous learning 
-        and professional growth. I am seeking opportunities to leverage my skills and contribute to the success of 
-        Solutions Architect, Software Development, and cloud engineering projects.
-      </p>
+    <div className="surface-card w-full rounded-3xl p-5 text-white sm:p-8">
+      <h1 className="text-left text-3xl font-bold sm:text-4xl">About Me</h1>
 
-      {/* Divider */}
-      <div className="border-t border-gray-600 my-6"></div>
-
-      {/* What I'm Doing Section */}
-      <h2 className="text-2xl sm:text-4xl font-bold mb-4 text-center sm:text-left">What I'm Doing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <motion.div
-          whileHover={{ scale: 1.1, backgroundColor: '#2e2f36' }}
-          className="bg-[#1d1e23] p-4 rounded-lg text-center border border-gray-600"
-        >
-          <FaTools className="text-3xl sm:text-4xl text-blue-500 mb-2 mx-auto" />
-          <h3 className="text-lg sm:text-xl font-bold mb-2 text-[#9a9da3]">Solutions Architect</h3>
-          <p className="text-xs sm:text-sm text-[#9a9da3]">
-            Designing scalable, secure, and cost-effective cloud architectures to optimize performance and enable seamless integration.
+      <div className="mt-4 space-y-4 text-left text-sm leading-relaxed sm:text-base">
+        {introParagraphs.map((paragraph) => (
+          <p key={paragraph} className="muted-text">
+            {paragraph}
           </p>
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1, backgroundColor: '#2e2f36' }}
-          className="bg-[#1d1e23] p-4 rounded-lg text-center border border-gray-600"
-        >
-          <FaCloud className="text-3xl sm:text-4xl text-blue-500 mb-2 mx-auto" />
-          <h3 className="text-lg sm:text-xl font-bold mb-2 text-[#9a9da3]">Cloud Engineer</h3>
-          <p className="text-xs sm:text-sm text-[#9a9da3]">
-            I enjoy designing, securing, and maintaining an organization's cloud-based infrastructure and applications.
-          </p>
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1, backgroundColor: '#2e2f36' }}
-          className="bg-[#1d1e23] p-4 rounded-lg text-center border border-gray-600"
-        >
-          <FaRobot className="text-3xl sm:text-4xl text-blue-500 mb-2 mx-auto" />
-          <h3 className="text-lg sm:text-xl font-bold mb-2 text-[#9a9da3]">AI</h3>
-          <p className="text-xs sm:text-sm text-[#9a9da3]">
-            Leveraging AI to drive innovation and improve decision-making.
-          </p>
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1, backgroundColor: '#2e2f36' }}
-          className="bg-[#1d1e23] p-4 rounded-lg text-center border border-gray-600"
-        >
-          <FaCode className="text-3xl sm:text-4xl text-blue-500 mb-2 mx-auto" />
-          <h3 className="text-lg sm:text-xl font-bold mb-2 text-[#9a9da3]">Software Development</h3>
-          <p className="text-xs sm:text-sm text-[#9a9da3]">
-            I enjoy learning software development either for personal or specific purposes.
-          </p>
-        </motion.div>
+        ))}
       </div>
 
-      {/* Divider */}
-      <div className="border-t border-gray-600 my-6"></div>
+      <div className="section-divider my-8 border-t" />
 
-      {/* Outside of Work Section */}
-      <h2 className="text-2xl sm:text-4xl font-bold mb-4 text-center sm:text-left">Outside of Work</h2>
-      <div className="flex flex-col md:flex-row md:justify-between items-center gap-6">
-        <motion.div
-          whileHover={{ y: -10, rotate: 2, transition: { type: "spring", stiffness: 300 } }}
-          className="flex flex-col items-center bg-[#1d1e23] p-4 sm:p-6 rounded-xl shadow-lg border border-gray-600 w-full md:w-1/4"
-        >
-          <FaDumbbell className="text-4xl sm:text-5xl text-green-500 mb-4" />
-          <h3 className="text-xl sm:text-2xl font-bold text-[#9a9da3] mb-2">Gym</h3>
-          <p className="text-xs sm:text-sm text-center text-[#9a9da3]">
-            Pushing my limits with intense workouts like Chris Bumstead.
-          </p>
-        </motion.div>
-        <motion.div
-          whileHover={{ y: -10, rotate: -2, transition: { type: "spring", stiffness: 300 } }}
-          className="flex flex-col items-center bg-[#1d1e23] p-4 sm:p-6 rounded-xl shadow-lg border border-gray-600 w-full md:w-1/4"
-        >
-          <FaBasketballBall className="text-4xl sm:text-5xl text-orange-500 mb-4" />
-          <h3 className="text-xl sm:text-2xl font-bold text-[#9a9da3] mb-2">Basketball</h3>
-          <p className="text-xs sm:text-sm text-center text-[#9a9da3]">
-            Splashing and dunking like LeBron James.
-          </p>
-        </motion.div>
-        <motion.div
-          whileHover={{ y: -10, scale: 1.05, transition: { type: "spring", stiffness: 300 } }}
-          className="flex flex-col items-center bg-[#1d1e23] p-4 sm:p-6 rounded-xl shadow-lg border border-gray-600 w-full md:w-1/4"
-        >
-          <FaMusic className="text-4xl sm:text-5xl text-purple-500 mb-4" />
-          <h3 className="text-xl sm:text-2xl font-bold text-[#9a9da3] mb-2">Piano</h3>
-          <p className="text-xs sm:text-sm text-center text-[#9a9da3]">
-            Striking the keys to create melodies that soothe the soul.
-          </p>
-        </motion.div>
-        <motion.div
-          whileHover={{ y: -10, rotate: 3, transition: { type: "spring", stiffness: 300 } }}
-          className="flex flex-col items-center bg-[#1d1e23] p-4 sm:p-6 rounded-xl shadow-lg border border-gray-600 w-full md:w-1/4"
-        >
-          <FaGamepad className="text-4xl sm:text-5xl text-red-500 mb-4" />
-          <h3 className="text-xl sm:text-2xl font-bold text-[#9a9da3] mb-2">Video Games</h3>
-          <p className="text-xs sm:text-sm text-center text-[#9a9da3]">
-            Diving into immersive worlds and adventures for fun and relaxation.
-          </p>
-        </motion.div>
+      <h2 className="text-left text-2xl font-bold sm:text-3xl">What I'm Doing</h2>
+      <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+        {focusAreas.map((item) => {
+          const Icon = item.icon;
+          return (
+            <motion.div
+              key={item.title}
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="surface-card-soft interactive-card rounded-2xl p-5 text-center"
+            >
+              <Icon className={`mx-auto mb-3 text-3xl sm:text-4xl ${item.iconColor}`} />
+              <h3 className="text-lg font-bold text-white sm:text-xl">{item.title}</h3>
+              <p className="muted-text mt-2 text-sm leading-relaxed">{item.description}</p>
+            </motion.div>
+          );
+        })}
       </div>
 
-      {/* Thank You Section */}
-      <div className="mt-12 sm:mt-16">
+      <div className="section-divider my-8 border-t" />
+
+      <h2 className="text-left text-2xl font-bold sm:text-3xl">Outside of Work</h2>
+      <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {hobbies.map((hobby) => {
+          const Icon = hobby.icon;
+          return (
+            <motion.div
+              key={hobby.title}
+              whileHover={{ y: -4, scale: 1.01 }}
+              className="surface-card-soft interactive-card rounded-2xl p-5 text-center"
+            >
+              <Icon className={`mx-auto mb-3 text-4xl ${hobby.iconColor}`} />
+              <h3 className="text-xl font-bold text-white">{hobby.title}</h3>
+              <p className="muted-text mt-2 text-sm">{hobby.description}</p>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      <div className="mt-10 sm:mt-12">
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-          className="bg-gradient-to-r from-[#5e68e6] via-[#405dea] to-[#363c87] p-4 sm:p-8 rounded-3xl shadow-2xl text-center"
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
+          className="rounded-3xl border border-blue-300/25 bg-gradient-to-r from-[#27477f] via-[#2b5da2] to-[#1f6bb1] p-6 text-center shadow-[0_20px_45px_-34px_rgba(26,66,128,1)] sm:p-8"
         >
-          <motion.h2
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="text-3xl sm:text-5xl font-extrabold text-white mb-4 animate-pulse"
-          >
-            Thank You For Visiting!
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="text-xs sm:text-xl text-white"
-          >
-            I truly appreciate your time and interest. Let's connect and create something extraordinary together!
-          </motion.p>
-          <motion.div
-            initial={{ rotate: 0 }}
-            animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-            className="mt-8 inline-block"
-          >
-            <svg width="60" height="60" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="45" stroke="white" strokeWidth="5" fill="transparent" />
-            </svg>
-          </motion.div>
+          <h2 className="text-3xl font-extrabold text-white sm:text-5xl">Thank You For Visiting!</h2>
+          <p className="mt-3 text-sm text-blue-50 sm:text-lg">
+            I appreciate your time and interest. Let&apos;s connect and build something meaningful together.
+          </p>
+          <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-blue-100/60" />
         </motion.div>
       </div>
     </div>

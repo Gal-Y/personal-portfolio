@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import About from './components/About';
@@ -19,50 +18,44 @@ import SRightBlog from './components/BlogPosts/SRightBlog';
 function App() {
   return (
     <Router>
-      <div className="relative min-h-screen bg-[#1d1e24] flex flex-col">
-      <div className="absolute inset-0 z-0">
-        <SvgDecoration />
-        <SvgDecorationLeftBottom />
-        <SvgDecorationRight />
-      </div>
+      <div className="relative min-h-screen overflow-x-clip">
+        <div className="pointer-events-none absolute inset-0 z-0">
+          <SvgDecoration />
+          <SvgDecorationLeftBottom />
+          <SvgDecorationRight />
+        </div>
 
-        <div className="App flex justify-center bg-[#1d1e24] min-h-screen">
-          <div className="max-w-screen-lg w-full">
-            <Header />
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-3 pb-10 pt-8 sm:px-5 lg:px-8">
+          <Header />
 
-            {/* Render Mobile Sidebar (horizontal) on small screens */}
-            <div className="md:hidden">
-              <Sidebar variant="mobile" />
+          <div className="mt-6 md:hidden">
+            <Sidebar variant="mobile" />
+          </div>
+
+          <div className="mt-6 flex items-start gap-6">
+            <div className="hidden md:block md:shrink-0">
+              <Sidebar variant="desktop" />
             </div>
 
-            <div className="flex">
-              {/* Render Desktop Sidebar (vertical) on medium and larger screens */}
-              <div className="hidden md:block">
-                <Sidebar variant="desktop" />
-              </div>
-
-              <div className="flex-1 p-8 pt-8 md:pt-8 bg-[#1d1e24] overflow-y-auto min-h-screen relative z-20">
-                <Routes>
-                  <Route path="/" element={<About />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/resume" element={<Resume />} />
-                  <Route path="/portfolio" element={<Portfolio />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/blogPosts/cjoy" element={<CJoyBlog />} />
-                  <Route path="/blogPosts/ccon" element={<CConBlog />} />
-                  <Route path="/blogPosts/pport" element={<PPortBlog />} />
-                  <Route path="/blogPosts/sright" element={<SRightBlog />} />
-                  <Route path="/contact" element={<Contact />} />
-                </Routes>
-              </div>
-            </div>
+            <main className="min-w-0 flex-1">
+              <Routes>
+                <Route path="/" element={<About />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blogPosts/cjoy" element={<CJoyBlog />} />
+                <Route path="/blogPosts/ccon" element={<CConBlog />} />
+                <Route path="/blogPosts/pport" element={<PPortBlog />} />
+                <Route path="/blogPosts/sright" element={<SRightBlog />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </main>
           </div>
         </div>
       </div>
     </Router>
   );
 }
-
-
 
 export default App;

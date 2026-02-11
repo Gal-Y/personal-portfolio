@@ -2,14 +2,15 @@ import React from 'react';
 
 const SvgDecoration = () => (
   <svg
-    className="absolute top-0 left-0 w-96 h-96 pointer-events-none"
+    className="absolute left-[-70px] top-[-70px] h-[420px] w-[420px] opacity-60 blur-[2px]"
     viewBox="0 0 200 200"
     xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
   >
     <defs>
       <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#4A90E2" />
-        <stop offset="100%" stopColor="#9013FE" />
+        <stop offset="0%" stopColor="#4f7ee8" />
+        <stop offset="100%" stopColor="#1787d4" />
       </linearGradient>
     </defs>
     <path

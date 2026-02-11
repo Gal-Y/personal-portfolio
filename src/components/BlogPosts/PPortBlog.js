@@ -4,12 +4,12 @@ import { FiLink } from 'react-icons/fi';
 
 const PPortBlog = () => {
   return (
-    <div className="bg-[#23262b] text-white p-8 rounded-3xl w-full max-w-screen-lg mx-auto">
+    <div className="surface-card text-white p-5 sm:p-8 rounded-3xl w-full max-w-screen-lg mx-auto">
       <h1 className="text-4xl font-bold mb-4">
         Showcasing My Personal Portfolio: A Journey of Creativity and Innovation
       </h1>
       
-      <p className="text-[#9a9da3] mb-6 text-left">
+      <p className="muted-text mb-6 text-left">
         In this post, I share my experience building my personal portfolio website—a platform designed to showcase my projects, experiences, and professional journey. 
         This project reflects my passion for learning new technologies and my commitment to creating engaging, responsive experiences.
       </p>
@@ -19,7 +19,7 @@ const PPortBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaUser className="text-orange-500 mr-2" /> Why I Built This Portfolio
         </h2>
-        <p className="text-[#9a9da3] text-left">
+        <p className="muted-text text-left">
           I built my portfolio to provide a personal space where I could highlight my skills, share my projects, and track my growth as a developer. It’s a living testament to my journey in the world of web development.
         </p>
       </section>
@@ -29,7 +29,7 @@ const PPortBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaLaptop className="text-blue-500 mr-2" /> Project Overview
         </h2>
-        <ul className="list-disc list-inside text-[#9a9da3] space-y-2 text-left">
+        <ul className="list-disc list-inside muted-text space-y-2 text-left">
           <li>Responsive design that adapts seamlessly to all devices</li>
           <li>Interactive animations and smooth transitions with Framer Motion</li>
           <li>A clean, modern interface built with React and Tailwind CSS</li>
@@ -42,7 +42,7 @@ const PPortBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaTools className="text-green-500 mr-2" /> Tech Stack
         </h2>
-        <div className="grid grid-cols-2 gap-4 text-[#9a9da3]">
+        <div className="grid grid-cols-2 gap-4 muted-text">
           <div className="flex items-center">
             <FaLaptop className="text-yellow-500 mr-2" /> React - Frontend
           </div>
@@ -63,7 +63,7 @@ const PPortBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaRocket className="text-purple-400 mr-2" /> Development Process
         </h2>
-        <ol className="list-decimal list-inside text-[#9a9da3] space-y-4 text-left">
+        <ol className="list-decimal list-inside muted-text space-y-4 text-left">
           <li>
             <strong className="text-white">Planning & Design:</strong> Mapped out the structure, user experience, and visual design of the portfolio.
           </li>
@@ -81,7 +81,7 @@ const PPortBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaBug className="text-red-400 mr-2" /> Key Challenges
         </h2>
-        <div className="space-y-4 text-[#9a9da3] text-left">
+        <div className="space-y-4 muted-text text-left">
           <div>
             <strong>Responsive Design:</strong> Ensuring optimal appearance and performance across all devices.
           </div>
@@ -96,7 +96,7 @@ const PPortBlog = () => {
         <h2 className="text-2xl font-bold mb-4 flex items-center">
           <FaRocket className="text-purple-400 mr-2" /> Lessons Learned
         </h2>
-        <ul className="list-disc list-inside text-[#9a9da3] space-y-2 text-left">
+        <ul className="list-disc list-inside muted-text space-y-2 text-left">
           <li>Enhanced my skills in React, Tailwind CSS, and modern web animations.</li>
           <li>Gained practical experience hosting a full stack application with AWS Amplify.</li>
           <li>Learned the importance of responsive design and performance optimization.</li>

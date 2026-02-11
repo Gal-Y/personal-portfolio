@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaBookOpen } from 'react-icons/fa';
+import { FaBookOpen, FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
-// blog posts
 const blogPosts = [
   {
     id: 1,
     title: 'CarnationJoyCare Website Rationale',
-    description: 'A user-friendly website for a aged care & disability service provider.',
+    description: 'A user-friendly website for an aged care and disability service provider.',
     date: '11/02/2025',
     image: require('../assets/carnationblog.png'),
     link: '/blogPosts/cjoy',
@@ -15,7 +15,7 @@ const blogPosts = [
   {
     id: 2,
     title: 'Simple Currency Converter Rationale',
-    description: 'Convert currency with ease using this simple application.',
+    description: 'Converting currency with a responsive cloud-hosted application.',
     date: '11/09/2024',
     image: require('../assets/currencyblog.png'),
     link: '/blogPosts/ccon',
@@ -23,7 +23,7 @@ const blogPosts = [
   {
     id: 3,
     title: 'Personal Portfolio Rationale',
-    description: 'Display my projects and experiences.',
+    description: 'How I built this portfolio to present projects and professional growth.',
     date: '15/01/2025',
     image: require('../assets/personalblog.png'),
     link: '/blogPosts/pport',
@@ -31,56 +31,43 @@ const blogPosts = [
   {
     id: 4,
     title: 'SplitRight Rationale',
-    description: 'A web application for expense splitting and k8s load generator.',
+    description: 'Expense splitting with Kubernetes autoscaling and cloud architecture.',
     date: '28/02/2025',
     image: require('../assets/splitrightblog.png'),
     link: '/blogPosts/sright',
   },
 ];
+
 const Blog = () => {
   return (
-    <div className="bg-[#23262b] text-white p-8 rounded-3xl w-full max-w-screen-lg mx-auto">
-      <h1 className="text-4xl font-bold mb-8 text-left">Blog</h1>
+    <div className="surface-card mx-auto w-full max-w-screen-lg rounded-3xl p-5 text-white sm:p-8">
+      <h1 className="text-left text-3xl font-bold sm:text-4xl">Blog</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
         {blogPosts.map((post) => (
-          <motion.div
-            key={post.id}
-            whileHover={{ scale: 1.03 }}
-            className="border border-gray-600 rounded-2xl overflow-hidden relative transition-transform"
-          >
-            {/* Date Tag */}
-            <div className="absolute top-2 left-2 bg-orange-500 text-white text-xs font-semibold px-2 py-1 rounded-md z-10">
-              {post.date}
-            </div>
+          <motion.article key={post.id} whileHover={{ y: -4, scale: 1.01 }} className="surface-card-soft interactive-card overflow-hidden rounded-2xl">
+            <Link to={post.link} className="block h-full">
+              <div className="relative">
+                <span className="absolute left-3 top-3 z-10 rounded-full border border-white/30 bg-[#203864]/90 px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.08em] text-blue-100">
+                  {post.date}
+                </span>
 
-            {/* Blog Image */}
-            <div className="relative group">
-              <img
-                src={post.image}
-                alt={post.title}
-                className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+                <img src={post.image} alt={post.title} className="h-44 w-full object-cover" />
 
-              {/* Hover Overlay with Book Icon */}
-              <div
-                className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center cursor-pointer rounded-2xl"
-                onClick={() => (window.location.href = post.link)}
-              >
-                <FaBookOpen className="text-white text-4xl" />
+                <div className="absolute inset-0 flex items-center justify-center bg-[#111826]/78 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                  <FaBookOpen className="text-4xl text-white" />
+                </div>
               </div>
-            </div>
 
-            {/* Blog Content */}
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-white mb-1 line-clamp-2">
-                {post.title}
-              </h3>
-              <p className="text-[#9a9da3] text-sm line-clamp-2">
-                {post.description}
-              </p>
-            </div>
-          </motion.div>
+              <div className="p-4 text-left">
+                <h3 className="line-clamp-2 text-lg font-bold text-white">{post.title}</h3>
+                <p className="muted-text mt-2 line-clamp-2 text-sm">{post.description}</p>
+                <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
+                  Read post <FaArrowRight className="text-xs" />
+                </span>
+              </div>
+            </Link>
+          </motion.article>
         ))}
       </div>
     </div>
