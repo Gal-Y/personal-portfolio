@@ -7,6 +7,8 @@ import ProjectImage2 from '../assets/currency.png';
 import ProjectImage3 from '../assets/personal.png';
 import ProjectImage4 from '../assets/splitright.png';
 import ProjectImage5 from '../assets/sushi-invoice.png';
+import ProjectImage6 from '../assets/mini-quant-lab.svg';
+import ProjectImage7 from '../assets/charlie-intelligence.svg';
 
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('projects');
@@ -36,7 +38,7 @@ const Portfolio = () => {
     {
       title: 'Expense Splitter',
       image: ProjectImage4,
-      link: 'http://aeba73389ac9f440ab6b82b03c595b30-8e2a78f55f0297b7.elb.ap-southeast-2.amazonaws.com/',
+      link: 'https://d29uafkfzy7eak.cloudfront.net/',
       techStack: ['AWS EKS', 'React', 'Python', 'Flask'],
       type: 'Application',
     },
@@ -47,6 +49,20 @@ const Portfolio = () => {
       techStack: ['React', 'Node.js', 'API Gateway', 'Lambda', 'DynamoDB'],
       type: 'Application',
     },
+    {
+      title: 'Mini Quant Lab',
+      image: ProjectImage6,
+      link: 'https://d3mf2mf3fqpn.cloudfront.net/',
+      techStack: ['Python', 'NumPy', 'Pandas', 'Chart.js', 'API Gateway'],
+      type: 'Application',
+    },
+    {
+      title: 'Charlie Intelligence Platform',
+      image: ProjectImage7,
+      link: 'https://github.com/shawn-wjh/SENG3011_W13A_Charlie',
+      techStack: ['AWS CDK', 'React', 'Vite', 'Python', 'DynamoDB', 'OpenAI API'],
+      type: 'Platform',
+    },
   ];
 
   const certifications = [
@@ -55,9 +71,14 @@ const Portfolio = () => {
       description: 'Earned in 2024. Demonstrates expertise in cloud fundamentals.',
     },
     {
-      title: 'Incoming: AWS Certified Solutions Architect - Associate',
+      title: 'AWS Certified Solutions Architect - Associate',
       description:
-        'Building toward a formal validation of secure, cost-effective, and scalable cloud architecture design skills.',
+        'Validates practical skills in designing secure, resilient, high-performing, and cost-optimized AWS architectures.',
+    },
+    {
+      title: 'AWS Certified AI Practitioner',
+      description:
+        'Validates foundational knowledge of AI/ML concepts and practical application of AWS AI services and responsible AI principles.',
     },
   ];
 

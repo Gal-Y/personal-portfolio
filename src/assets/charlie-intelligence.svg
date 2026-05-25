@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Charlie Intelligence Platform preview</title>
+  <desc id="desc">Dark market intelligence dashboard with data cards, charts, and the Charlie brand mark.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#101722" />
+      <stop offset="0.56" stop-color="#162235" />
+      <stop offset="1" stop-color="#0c121d" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#223149" />
+      <stop offset="1" stop-color="#121c2c" />
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#42d5ff" />
+      <stop offset="1" stop-color="#0b72d0" />
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#c4ef3a" />
+      <stop offset="1" stop-color="#68bf08" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020714" flood-opacity="0.42" />
+    </filter>
+  </defs>
+
+  <rect width="960" height="520" rx="0" fill="url(#bg)" />
+  <circle cx="118" cy="90" r="190" fill="#2563eb" opacity="0.18" />
+  <circle cx="828" cy="72" r="150" fill="#23c4ff" opacity="0.12" />
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="64" width="820" height="392" rx="26" fill="url(#panel)" stroke="#5d78a6" stroke-opacity="0.28" />
+    <rect x="104" y="98" width="190" height="324" rx="18" fill="#0e1726" stroke="#5d78a6" stroke-opacity="0.22" />
+    <rect x="320" y="98" width="536" height="90" rx="18" fill="#111d2e" stroke="#5d78a6" stroke-opacity="0.2" />
+    <rect x="320" y="216" width="260" height="206" rx="18" fill="#111d2e" stroke="#5d78a6" stroke-opacity="0.2" />
+    <rect x="604" y="216" width="252" height="206" rx="18" fill="#111d2e" stroke="#5d78a6" stroke-opacity="0.2" />
+  </g>
+
+  <g transform="translate(130 124) scale(0.62)">
+    <polygon points="24,88 134,24 182,52 72,116" fill="url(#blue)" />
+    <polygon points="24,88 72,116 24,144" fill="#0c9fe3" />
+    <polygon points="24,144 72,116 110,138 62,166" fill="#126dca" />
+    <polygon points="128,70 182,100 182,148 128,118" fill="url(#green)" />
+    <polygon points="126,132 156,149 128,165 98,148" fill="#6f7378" />
+    <polygon points="98,178 156,145 212,178 154,212" fill="#303134" />
+    <polygon points="154,212 212,178 212,146 154,180" fill="#8a8d91" />
+  </g>
+
+  <text x="130" y="306" fill="#f2f7ff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Charlie</text>
+  <text x="130" y="344" fill="#9fb3d1" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600">Market intelligence</text>
+  <rect x="130" y="372" width="118" height="28" rx="14" fill="#15345c" stroke="#3b82f6" stroke-opacity="0.45" />
+  <text x="151" y="392" fill="#bfe1ff" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">AWS CDK</text>
+
+  <text x="348" y="136" fill="#f5f8ff" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Live signal board</text>
+  <text x="348" y="166" fill="#97a8c5" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Stocks, FX, weather, traffic, news, and AI analyst workflows</text>
+  <path d="M638 160 L674 132 L712 150 L748 118 L792 138 L830 104" fill="none" stroke="#7dd3fc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="350" y="262" fill="#f2f7ff" font-size="18" font-weight="800">Cross-industry analytics</text>
+    <path d="M350 370 C386 318 418 354 454 304 C496 246 536 314 558 274" fill="none" stroke="#c4ef3a" stroke-width="6" stroke-linecap="round" />
+    <path d="M350 386 C386 360 420 378 454 346 C500 302 528 334 558 320" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" opacity="0.8" />
+    <line x1="350" y1="394" x2="560" y2="394" stroke="#5d78a6" stroke-opacity="0.28" />
+    <line x1="350" y1="284" x2="350" y2="394" stroke="#5d78a6" stroke-opacity="0.28" />
+
+    <text x="632" y="262" fill="#f2f7ff" font-size="18" font-weight="800">Platform services</text>
+    <rect x="632" y="292" width="184" height="22" rx="11" fill="#213553" />
+    <rect x="632" y="292" width="144" height="22" rx="11" fill="#3b82f6" />
+    <rect x="632" y="330" width="184" height="22" rx="11" fill="#213553" />
+    <rect x="632" y="330" width="116" height="22" rx="11" fill="#8dcc25" />
+    <rect x="632" y="368" width="184" height="22" rx="11" fill="#213553" />
+    <rect x="632" y="368" width="154" height="22" rx="11" fill="#42d5ff" />
+  </g>
+</svg>

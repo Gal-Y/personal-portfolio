@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBriefcase, FaCode, FaCogs, FaGraduationCap, FaUsers } from 'react-icons/fa';
+import { FaBriefcase, FaCode, FaCogs, FaGraduationCap, FaUsers, FaRobot } from 'react-icons/fa';
 
 const Resume = () => {
   return (
@@ -18,25 +18,42 @@ const Resume = () => {
             <div className="w-3 h-3 mt-1 bg-blue-500 rounded-full"></div>
           </div>
           <div className="ml-4">
-            <h3 className="text-xl font-bold text-white text-left">IBM as Software Support Engineer Intern</h3>
+            <h3 className="text-xl font-bold text-white text-left">Amazon Web Services as Solutions Architect Intern</h3>
             <div className="flex flex-col text-left">
-              <p className="text-sm text-accent">February 2025 - Present</p>
+              <p className="text-sm text-accent">December 2025 - February 2026</p>
               <p className="text-sm muted-text">Sydney, Australia</p>
             </div>
             <div className="border-l-2 section-divider mt-2 pl-4">
               <ul className="list-disc list-inside muted-text text-left space-y-6">
-                <li>Collaborating with technical teams to manage and streamline support processes for IBM Maximo Asset Management, a leading 
-                  enterprise asset management software used across various industries.</li>
-                <li>Developing expertise in IT support workflows, troubleshooting complex system issues, 
-                  and gaining exposure to database management technologies such as SQL and DB2.</li>
-                <li>Enhancing automation and operational efficiency by documenting and optimizing technical support processes, 
-                  ensuring seamless issue resolution and improved client experiences.</li>
+                <li>Architected and deployed a GenAI solution on AWS (LLM + RAG) to convert unstructured pathology documents into structured FHIR resources, storing outputs in HealthLake and enabling analytics via S3 and Athena.</li>
+                <li>Partnered with 5+ customers to translate business needs into technical requirements and AWS solution designs, delivering 8+ architecture diagrams and implementation plans with defined success metrics.</li>
+                <li>Delivered cost optimization opportunities across customer AWS architectures, recommending right-sizing, serverless, and storage tiering changes that reduced projected cloud costs by 20%.</li>
               </ul>
             </div>
           </div>
         </div>
 
         {/* Second Experience */}
+        <div className="flex items-start mt-12">
+          <div className="flex-shrink-0 mt-1">
+            <div className="w-3 h-3 mt-1 bg-blue-500 rounded-full"></div>
+          </div>
+          <div className="ml-4">
+            <h3 className="text-xl font-bold text-white text-left">IBM as Software Support Engineer Intern</h3>
+            <div className="flex flex-col text-left">
+              <p className="text-sm text-accent">February 2025 - August 2025</p>
+              <p className="text-sm muted-text">Sydney, Australia</p>
+            </div>
+            <div className="border-l-2 section-divider mt-2 pl-4">
+              <ul className="list-disc list-inside muted-text text-left space-y-6">
+                <li>Collaborated with product, SRE, and engineering teams to triage and resolve enterprise software incidents, translating technical issues into actionable fixes and improved support workflows.</li>
+                <li>Analyzed system logs and SQL/DB2 data to identify root causes and recommend reliability improvements across client deployments.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Third Experience */}
         <div className="flex items-start mt-12">
           <div className="flex-shrink-0 mt-1">
             <div className="w-3 h-3 mt-1 bg-blue-500 rounded-full"></div>
@@ -62,7 +79,7 @@ const Resume = () => {
           </div>
         </div>
 
-        {/* Third Experience */}
+        {/* Fourth Experience */}
         <div className="flex items-start mt-12">
           <div className="flex-shrink-0 mt-1">
             <div className="w-3 h-3 mt-1 bg-blue-500 rounded-full"></div>
@@ -311,6 +328,69 @@ const Resume = () => {
         </div>
         <div className="bg-gray-700 rounded-full h-2">
           <div className="bg-orange-500 h-2 rounded-full w-1/4"></div> {/* Adjust width for skill level */}
+        </div>
+      </div>
+
+      {/* AI Skills Section */}
+      <div className="border-t section-divider my-8"></div>
+
+      <h2 className="text-3xl font-bold mb-4 text-white text-left flex items-center">
+        <FaRobot className="text-blue-500 mr-4" /> AI Skills
+      </h2>
+
+      <div className="mb-8">
+        {/* Skill Item */}
+        <div className="flex justify-between mb-2">
+          <span className="text-white">AI Coding Tools (Claude Code, Codex, GitHub Copilot)</span>
+          <span className="text-purple-500">Proficient</span>
+        </div>
+        <div className="bg-gray-700 rounded-full h-2">
+          <div className="bg-purple-500 h-2 rounded-full w-3/4"></div>
+        </div>
+
+        {/* Skill Item */}
+        <div className="flex justify-between mb-2 mt-2">
+          <span className="text-white">Retrieval-Augmented Generation (RAG)</span>
+          <span className="text-blue-500">Intermediate</span>
+        </div>
+        <div className="bg-gray-700 rounded-full h-2">
+          <div className="bg-blue-500 h-2 rounded-full w-2/4"></div>
+        </div>
+
+        {/* Skill Item */}
+        <div className="flex justify-between mb-2 mt-2">
+          <span className="text-white">Prompt Engineering</span>
+          <span className="text-blue-500">Intermediate</span>
+        </div>
+        <div className="bg-gray-700 rounded-full h-2">
+          <div className="bg-blue-500 h-2 rounded-full w-2/4"></div>
+        </div>
+
+        {/* Skill Item */}
+        <div className="flex justify-between mb-2 mt-2">
+          <span className="text-white">Agentic Workflows</span>
+          <span className="text-blue-500">Intermediate</span>
+        </div>
+        <div className="bg-gray-700 rounded-full h-2">
+          <div className="bg-blue-500 h-2 rounded-full w-2/4"></div>
+        </div>
+
+        {/* Skill Item */}
+        <div className="flex justify-between mb-2 mt-2">
+          <span className="text-white">LLM App Integration</span>
+          <span className="text-blue-500">Intermediate</span>
+        </div>
+        <div className="bg-gray-700 rounded-full h-2">
+          <div className="bg-blue-500 h-2 rounded-full w-2/4"></div>
+        </div>
+
+        {/* Skill Item */}
+        <div className="flex justify-between mb-2 mt-2">
+          <span className="text-white">Model Evaluation & Iteration</span>
+          <span className="text-orange-500">Beginner</span>
+        </div>
+        <div className="bg-gray-700 rounded-full h-2">
+          <div className="bg-orange-500 h-2 rounded-full w-1/4"></div>
         </div>
       </div>
     </div>

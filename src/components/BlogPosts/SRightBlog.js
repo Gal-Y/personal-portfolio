@@ -119,7 +119,7 @@ const SRightBlog = () => {
             GitHub Repository
           </a>
           <a
-            href="http://aeba73389ac9f440ab6b82b03c595b30-8e2a78f55f0297b7.elb.ap-southeast-2.amazonaws.com/"
+            href="https://d29uafkfzy7eak.cloudfront.net/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-md text-white transition"
