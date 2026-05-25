@@ -36,6 +36,22 @@ const blogPosts = [
     image: require('../assets/splitrightblog.png'),
     link: '/blogPosts/sright',
   },
+  {
+    id: 5,
+    title: 'Sushi-Invoice Rationale',
+    description: 'An AI-powered invoice platform with full-stack AWS deployment.',
+    date: '20/05/2025',
+    image: require('../assets/sushi-invoice.png'),
+    link: '/blogPosts/sinvoice',
+  },
+  {
+    id: 6,
+    title: 'Mini Quant Lab Rationale',
+    description: 'A cloud-hosted educational lab for predictive investing with NumPy and Pandas.',
+    date: '19/02/2026',
+    image: require('../assets/mini-quant-lab.svg'),
+    link: '/blogPosts/mquant',
+  },
 ];
 
 const Blog = () => {

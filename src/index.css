@@ -151,6 +151,105 @@
     border-color: var(--border-strong);
     box-shadow: 0 22px 40px -30px rgba(7, 14, 27, 1);
   }
+
+  .side-decor-wrap {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    display: none;
+  }
+
+  .side-decor-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: clamp(11rem, 15vw, 17rem);
+    overflow: hidden;
+  }
+
+  .side-decor-left {
+    left: 0;
+    border-right: 1px solid rgba(136, 156, 198, 0.2);
+    background: linear-gradient(180deg, rgba(26, 33, 49, 0.72) 0%, rgba(18, 24, 37, 0.18) 58%, rgba(20, 27, 39, 0.62) 100%);
+  }
+
+  .side-decor-right {
+    right: 0;
+    border-left: 1px solid rgba(136, 156, 198, 0.2);
+    background: linear-gradient(180deg, rgba(26, 33, 49, 0.72) 0%, rgba(18, 24, 37, 0.18) 58%, rgba(20, 27, 39, 0.62) 100%);
+  }
+
+  .side-decor-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(111, 145, 210, 0.28) 0.9px, transparent 0.9px);
+    background-size: 19px 19px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 1) 24%, rgba(0, 0, 0, 1) 76%, rgba(0, 0, 0, 0.45));
+    opacity: 0.6;
+  }
+
+  .side-decor-rail {
+    position: absolute;
+    top: 11%;
+    bottom: 11%;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(138, 182, 255, 0), rgba(138, 182, 255, 0.75) 24%, rgba(138, 182, 255, 0.75) 76%, rgba(138, 182, 255, 0));
+  }
+
+  .side-decor-rail-left {
+    right: 16px;
+  }
+
+  .side-decor-rail-right {
+    left: 16px;
+  }
+
+  .side-decor-glow {
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(67, 144, 255, 0.24) 0%, rgba(67, 144, 255, 0.07) 40%, rgba(67, 144, 255, 0) 70%);
+    animation: sideGlowFloat 16s ease-in-out infinite;
+  }
+
+  .side-decor-left .side-decor-glow-top,
+  .side-decor-right .side-decor-glow-top {
+    top: 5%;
+  }
+
+  .side-decor-left .side-decor-glow-bottom,
+  .side-decor-right .side-decor-glow-bottom {
+    bottom: 4%;
+    animation-delay: 2.8s;
+  }
+
+  .side-decor-left .side-decor-glow {
+    left: -112px;
+  }
+
+  .side-decor-right .side-decor-glow {
+    right: -112px;
+  }
+}
+
+@keyframes sideGlowFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.82;
+  }
+  50% {
+    transform: translateY(16px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1320px) {
+  .side-decor-wrap {
+    display: block;
+  }
 }
 
 a:focus-visible,
@@ -191,5 +290,9 @@ button:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .side-decor-glow {
+    animation: none !important;
   }
 }

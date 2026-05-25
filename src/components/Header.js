@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaMapMarkerAlt, FaRegFileAlt, FaRegEnvelope, FaRegStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -14,16 +15,20 @@ const Header = () => {
 
       <div className="relative flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <div className="relative mx-auto sm:mx-0">
+          <Link
+            to="/"
+            aria-label="Go to home"
+            className="relative mx-auto block sm:mx-0"
+          >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400/80 to-blue-700/90 blur-[1px]" />
             <div className="relative m-[2px] h-28 w-28 rounded-2xl bg-[#1b202d] p-[5px] sm:h-32 sm:w-32">
               <img
-                src={require('../assets/profile.jpg')}
+                src={require('../assets/profile.png')}
                 alt="Profile"
                 className="h-full w-full rounded-[0.95rem] object-cover"
               />
             </div>
-          </div>
+          </Link>
 
           <div className="text-center sm:text-left">
             <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-[2.1rem]">Galen Yuan</h1>
