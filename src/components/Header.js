@@ -9,18 +9,19 @@ const Header = () => {
       initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, ease: 'easeOut' }}
-      className="surface-card relative overflow-hidden rounded-[1.85rem] p-5 text-white sm:p-6"
+      className="surface-card header-card relative overflow-hidden rounded-[1.85rem] p-5 text-white sm:p-6"
     >
       <div className="pointer-events-none absolute -right-16 -top-20 h-52 w-52 rounded-full bg-blue-500/20 blur-3xl" />
+      <div className="header-card__beam" aria-hidden="true" />
 
       <div className="relative flex flex-col gap-6 xl:flex-row xl:items-center xl:justify-between">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <Link
             to="/"
             aria-label="Go to home"
-            className="relative mx-auto block sm:mx-0"
+            className="profile-frame relative mx-auto block sm:mx-0"
           >
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400/80 to-blue-700/90 blur-[1px]" />
+            <div className="profile-frame__glow absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-400/80 to-blue-700/90 blur-[1px]" />
             <div className="relative m-[2px] h-28 w-28 rounded-2xl bg-[#1b202d] p-[5px] sm:h-32 sm:w-32">
               <img
                 src={require('../assets/profile.png')}
@@ -35,14 +36,15 @@ const Header = () => {
             <p className="mt-1 text-sm font-semibold text-blue-200 sm:text-base">
               SWE Student | Aspiring Solutions Architect | Software Engineer
             </p>
-            <span className="chip mt-3 inline-flex gap-1.5">
+            <span className="chip status-chip mt-3 inline-flex gap-2">
+              <span className="status-chip__pulse" aria-hidden="true" />
               <FaRegStar className="text-[0.72rem] text-blue-300" /> Open to opportunities
             </span>
           </div>
         </div>
 
         <div className="grid w-full gap-3 sm:grid-cols-2 xl:w-auto xl:min-w-[430px]">
-          <div className="surface-card-soft rounded-xl p-3 text-left">
+          <div className="surface-card-soft header-detail-card rounded-xl p-3 text-left">
             <p className="flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-blue-200">
               <FaRegEnvelope /> Email
             </p>
@@ -54,7 +56,7 @@ const Header = () => {
             </a>
           </div>
 
-          <div className="surface-card-soft rounded-xl p-3 text-left">
+          <div className="surface-card-soft header-detail-card rounded-xl p-3 text-left">
             <p className="flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-blue-200">
               <FaRegFileAlt /> CV
             </p>
@@ -67,26 +69,42 @@ const Header = () => {
             </a>
           </div>
 
-          <div className="surface-card-soft rounded-xl p-3 text-left">
+          <div className="surface-card-soft header-detail-card rounded-xl p-3 text-left">
             <p className="flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-[0.08em] text-blue-200">
               <FaMapMarkerAlt /> Location
             </p>
             <p className="mt-1 text-sm font-semibold text-[#ebf2ff]">Sydney, Australia</p>
           </div>
 
-          <div className="surface-card-soft rounded-xl p-3 text-left">
+          <div className="surface-card-soft header-detail-card rounded-xl p-3 text-left">
             <p className="text-[0.72rem] font-bold uppercase tracking-[0.08em] text-blue-200">Status</p>
             <p className="mt-1 text-sm font-semibold text-[#ebf2ff]">Available for SWE internships</p>
           </div>
         </div>
 
         <div className="flex items-center justify-center gap-3 xl:justify-end">
-          <a href="https://www.linkedin.com/in/galen-yuan/" target="_blank" rel="noopener noreferrer" className="icon-button" aria-label="LinkedIn">
+          <motion.a
+            href="https://www.linkedin.com/in/galen-yuan/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-button"
+            aria-label="LinkedIn"
+            whileHover={{ y: -3, rotate: -3 }}
+            whileTap={{ scale: 0.92 }}
+          >
             <FaLinkedin className="text-lg" />
-          </a>
-          <a href="https://github.com/Gal-Y" target="_blank" rel="noopener noreferrer" className="icon-button" aria-label="GitHub">
+          </motion.a>
+          <motion.a
+            href="https://github.com/Gal-Y"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-button"
+            aria-label="GitHub"
+            whileHover={{ y: -3, rotate: 3 }}
+            whileTap={{ scale: 0.92 }}
+          >
             <FaGithub className="text-lg" />
-          </a>
+          </motion.a>
         </div>
       </div>
     </motion.header>
