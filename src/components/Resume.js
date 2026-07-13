@@ -3,7 +3,7 @@ import { FaBriefcase, FaCode, FaCogs, FaGraduationCap, FaUsers, FaRobot } from '
 
 const Resume = () => {
   return (
-    <div className="surface-card text-white p-5 sm:p-8 rounded-3xl w-full max-w-screen-lg mx-auto">
+    <div className="surface-card resume-page text-white p-5 sm:p-8 rounded-3xl w-full max-w-screen-lg mx-auto">
       <h1 className="text-4xl font-bold mb-8 text-white text-left">Resume</h1>
       <div className="border-t section-divider my-8"></div>
       

@@ -73,6 +73,18 @@ const introParagraphs = [
   "While completing my Bachelor's degree in Software Engineering, I am committed to continuous learning and professional growth. I am seeking opportunities to contribute to Solutions Architecture, Software Development, and cloud engineering projects.",
 ];
 
+const cardGridVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.08, delayChildren: 0.08 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.38, ease: 'easeOut' } },
+};
+
 const About = () => {
   return (
     <div className="surface-card w-full rounded-3xl p-5 text-white sm:p-8">
@@ -89,49 +101,67 @@ const About = () => {
       <div className="section-divider my-8 border-t" />
 
       <h2 className="text-left text-2xl font-bold sm:text-3xl">What I'm Doing</h2>
-      <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <motion.div
+        className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2"
+        variants={cardGridVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {focusAreas.map((item) => {
           const Icon = item.icon;
           return (
             <motion.div
               key={item.title}
-              whileHover={{ y: -4, scale: 1.01 }}
-              className="surface-card-soft interactive-card rounded-2xl p-5 text-center"
+              variants={cardVariants}
+              whileHover={{ y: -6, scale: 1.015 }}
+              whileTap={{ scale: 0.99 }}
+              className="surface-card-soft interactive-card feature-card rounded-2xl p-5 text-center"
             >
-              <Icon className={`mx-auto mb-3 text-3xl sm:text-4xl ${item.iconColor}`} />
+              <span className="feature-card__icon">
+                <Icon className={`text-3xl sm:text-4xl ${item.iconColor}`} />
+              </span>
               <h3 className="text-lg font-bold text-white sm:text-xl">{item.title}</h3>
               <p className="muted-text mt-2 text-sm leading-relaxed">{item.description}</p>
             </motion.div>
           );
         })}
-      </div>
+      </motion.div>
 
       <div className="section-divider my-8 border-t" />
 
       <h2 className="text-left text-2xl font-bold sm:text-3xl">Outside of Work</h2>
-      <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <motion.div
+        className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4"
+        variants={cardGridVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {hobbies.map((hobby) => {
           const Icon = hobby.icon;
           return (
             <motion.div
               key={hobby.title}
-              whileHover={{ y: -4, scale: 1.01 }}
-              className="surface-card-soft interactive-card rounded-2xl p-5 text-center"
+              variants={cardVariants}
+              whileHover={{ y: -6, scale: 1.015 }}
+              whileTap={{ scale: 0.99 }}
+              className="surface-card-soft interactive-card hobby-card rounded-2xl p-5 text-center"
             >
-              <Icon className={`mx-auto mb-3 text-4xl ${hobby.iconColor}`} />
+              <span className="feature-card__icon feature-card__icon--compact">
+                <Icon className={`text-4xl ${hobby.iconColor}`} />
+              </span>
               <h3 className="text-xl font-bold text-white">{hobby.title}</h3>
               <p className="muted-text mt-2 text-sm">{hobby.description}</p>
             </motion.div>
           );
         })}
-      </div>
+      </motion.div>
 
       <div className="mt-10 sm:mt-12">
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="rounded-3xl border border-blue-300/25 bg-gradient-to-r from-[#27477f] via-[#2b5da2] to-[#1f6bb1] p-6 text-center shadow-[0_20px_45px_-34px_rgba(26,66,128,1)] sm:p-8"
+          className="thank-you-card rounded-3xl border border-blue-300/25 bg-gradient-to-r from-[#27477f] via-[#2b5da2] to-[#1f6bb1] p-6 text-center shadow-[0_20px_45px_-34px_rgba(26,66,128,1)] sm:p-8"
         >
           <h2 className="text-3xl font-extrabold text-white sm:text-5xl">Thank You For Visiting!</h2>
           <p className="mt-3 text-sm text-blue-50 sm:text-lg">

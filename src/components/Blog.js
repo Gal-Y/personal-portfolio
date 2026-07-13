@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBookOpen, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { newProjectBlogPosts } from '../data/projectData';
 
-const blogPosts = [
+const existingBlogPosts = [
   {
     id: 1,
     title: 'CarnationJoyCare Website Rationale',
@@ -54,6 +55,8 @@ const blogPosts = [
   },
 ];
 
+const blogPosts = [...newProjectBlogPosts, ...existingBlogPosts];
+
 const Blog = () => {
   return (
     <div className="surface-card mx-auto w-full max-w-screen-lg rounded-3xl p-5 text-white sm:p-8">
@@ -61,16 +64,21 @@ const Blog = () => {
 
       <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
         {blogPosts.map((post) => (
-          <motion.article key={post.id} whileHover={{ y: -4, scale: 1.01 }} className="surface-card-soft interactive-card overflow-hidden rounded-2xl">
+          <motion.article key={post.id} whileHover={{ y: -7, scale: 1.012 }} className="surface-card-soft interactive-card blog-card group overflow-hidden rounded-2xl">
             <Link to={post.link} className="block h-full">
               <div className="relative">
                 <span className="absolute left-3 top-3 z-10 rounded-full border border-white/30 bg-[#203864]/90 px-2.5 py-1 text-[0.68rem] font-bold uppercase tracking-[0.08em] text-blue-100">
                   {post.date}
                 </span>
+                {post.deploymentLabel && (
+                  <span className={`deployment-badge deployment-badge--${post.deploymentState}`}>
+                    {post.deploymentLabel}
+                  </span>
+                )}
 
-                <img src={post.image} alt={post.title} className="h-44 w-full object-cover" />
+                <img src={post.image} alt={post.title} loading="lazy" className="h-44 w-full object-cover transition duration-500 group-hover:scale-[1.045]" />
 
-                <div className="absolute inset-0 flex items-center justify-center bg-[#111826]/78 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                <div className="absolute inset-0 flex items-center justify-center bg-[#111826]/78 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
                   <FaBookOpen className="text-4xl text-white" />
                 </div>
               </div>
@@ -78,7 +86,7 @@ const Blog = () => {
               <div className="p-4 text-left">
                 <h3 className="line-clamp-2 text-lg font-bold text-white">{post.title}</h3>
                 <p className="muted-text mt-2 line-clamp-2 text-sm">{post.description}</p>
-                <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
+                <span className="blog-card__link mt-3 inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
                   Read post <FaArrowRight className="text-xs" />
                 </span>
               </div>
